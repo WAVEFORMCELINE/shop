@@ -31,7 +31,7 @@
         <tr>
           <td><a><b> 1. Список товаров </b></a><br></td>
           <td> Отобразить список всех категорий с товарами, чтобы была видна вложенность. </td>
-          <td class="project-actions text-right"><a class="btn btn-primary btn-sm" href={{ route('api.sort')}} ><i class="fas fa-arrow-right"></i> Перейти </a></td>
+          <td class="project-actions text-right"><a class="btn btn-primary btn-sm" href={{ route('api.categories')}} ><i class="fas fa-arrow-right"></i> Перейти </a></td>
         </tr>
         <tr>
           <td><a><b> 2. Отчёт покупок </b></a><br></td>

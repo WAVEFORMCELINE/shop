@@ -23,7 +23,7 @@ Route::post('/orders', \App\Http\Controllers\API\Order\StoreController::class);
 Route::get('/products', \App\Http\Controllers\API\Product\IndexController::class);
 Route::get('/products/{product}', \App\Http\Controllers\API\Product\ShowController::class);
 
-Route::get('/categories', [\App\Http\Controllers\API\Report\ApiController::class, 'getCategoriesWithProducts']);
+Route::get('/categories', [\App\Http\Controllers\API\Report\ApiController::class, 'getCategoriesWithProducts'])->name('api.categories');
 Route::get('/report/purchases', [\App\Http\Controllers\API\Report\ApiController::class, 'generatePurchaseReport']);
-Route::get('/sort', [\App\Http\Controllers\API\Report\ApiController::class, 'sortProducts']);
+Route::get('/sort', [\App\Http\Controllers\API\Report\ApiController::class, 'sortProducts'])->name('api.sort');
 Route::put('/products/{product}/move', [\App\Http\Controllers\API\Report\ApiController::class, 'moveProduct'])->name('api.moveProduct');
