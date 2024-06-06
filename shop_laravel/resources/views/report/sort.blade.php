@@ -28,7 +28,7 @@
             <option value="asc">По возрастанию</option>
             <option value="desc">По убыванию</option>
         </select>
-        <p></p>
+        <label>При нажатии на кнопку ответ придёт в консоль в виде JSON</label>
         <div class="form-group">
             <button id="submitButton" class="btn btn-primary">Перейти</button>
         </div>

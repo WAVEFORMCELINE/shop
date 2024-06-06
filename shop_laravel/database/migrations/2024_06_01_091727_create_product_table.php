@@ -18,7 +18,7 @@ class CreateProductTable extends Migration
             $table->string('name');
             $table->decimal('price', 8, 2);
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
-            $table->
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

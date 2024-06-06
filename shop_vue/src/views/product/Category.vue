@@ -45,6 +45,7 @@
     data() {
       return {
         products: [],
+        categories: [],
         notification: {
           show: false,
           message: ''
@@ -53,9 +54,11 @@
     },
     mounted() {
       this.getProducts();
+      this.getCategories();
     },
     computed: {
     filteredProducts() {
+      
       return this.products.filter(products => products.category.parent_id == this.$route.params.id); // Фильтруем товары по category_id
     }
   },
@@ -64,8 +67,16 @@
         this.axios.get('http://127.0.0.1:8000/api/products')
           .then(res => {
             this.products = res.data.data;
+            console.log(this.products)
           });
       },
+      getCategories() {
+            this.axios.get('http://127.0.0.1:8000/api/categories')
+            .then(res=> {
+                this.categories = res.data
+                console.log(this.categories)
+            })
+        },
       addToCart(product) {
         let cart = localStorage.getItem('cart');
         let newProduct = {

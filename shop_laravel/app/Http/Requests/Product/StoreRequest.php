@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Product;
 
 use Illuminate\Foundation\Http\FormRequest;
+use PhpParser\Node\NullableType;
 
 class StoreRequest extends FormRequest
 {
@@ -26,7 +27,8 @@ class StoreRequest extends FormRequest
         return [
             'name' => 'required|string',
             'price' => 'required',
-            'category_id' => 'required|integer'
+            'category_id' => 'required|integer',
+            'image' => 'nullable|string'
         ];
     }
 }

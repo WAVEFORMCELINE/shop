@@ -103,7 +103,6 @@ export default {
     },
 
     methods: {
-        
         getCategories() {
             this.axios.get('http://127.0.0.1:8000/api/categories')
             .then(res=> {
